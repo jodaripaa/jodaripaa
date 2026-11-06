@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="330" viewBox="0 0 1280 330" role="img" aria-label="Now. Building: Syndes and Anillo Lab. Learning: software architecture and embedded systems. Exploring: AI inside products and gesture interfaces.">
+<style>.sans{font-family:'Inter','Segoe UI Variable Display','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}.mono{font-family:'JetBrains Mono','Cascadia Code',ui-monospace,Consolas,Menlo,monospace}
+.fig{font-size:15px;letter-spacing:2px;fill:#66728A}
+.hd{font-size:15px;letter-spacing:2.4px}
+.it{font-size:26px;font-weight:600;letter-spacing:-.4px;fill:#090B10}
+.st{font-size:18px;fill:#66728A}
+.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
+@media (prefers-reduced-motion:reduce){.led{display:none}}
+</style>
+<rect x="1" y="1" width="1278" height="328" rx="14" fill="#FFFFFF" stroke="#D3DAE6" stroke-width="2"/>
+<path d="M2 64H1278" stroke="#D3DAE6" stroke-width="1.5"/>
+<text class="mono fig" x="40" y="40">FIG. 06 — STATUS</text>
+<text class="mono fig" x="1240" y="40" text-anchor="end">UPDATED 2026-11-06</text>
+<circle cx="46" cy="112" r="6" fill="#0077B6"/><circle class="led" cx="46" cy="112" r="6" fill="#0077B6"/><text class="mono hd" x="62" y="117" fill="#0077B6">BUILDING</text><text class="sans it" x="40" y="172">Syndes</text><text class="sans st" x="40" y="202">Getting it ready for its first businesses</text><text class="sans it" x="40" y="254">Anillo Lab</text><text class="sans st" x="40" y="284">From webcam gestures to the ring's hardware</text>
+<path d="M433 96V300" stroke="#D3DAE6"/><circle cx="459" cy="112" r="5.5" fill="none" stroke="#3A50E0" stroke-width="2"/><text class="mono hd" x="475" y="117" fill="#3A50E0">LEARNING</text><text class="sans it" x="453" y="172">Software architecture</text><text class="sans st" x="453" y="202">Patterns, trade-offs and system design</text><text class="sans it" x="453" y="254">Embedded systems</text><text class="sans st" x="453" y="284">ESP32 · IMU · Bluetooth LE</text>
+<path d="M846 96V300" stroke="#D3DAE6"/><circle cx="872" cy="112" r="5.5" fill="none" stroke="#66728A" stroke-width="2"/><text class="mono hd" x="888" y="117" fill="#66728A">EXPLORING</text><text class="sans it" x="866" y="172">AI inside products</text><text class="sans st" x="866" y="202">Gemini API in learning tools</text><text class="sans it" x="866" y="254">Gesture interfaces</text><text class="sans st" x="866" y="284">The hand as an input device</text>
+</svg>

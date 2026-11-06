@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="120" viewBox="0 0 1280 120" role="img" aria-label="Selected work">
+<style>.sans{font-family:'Inter','Segoe UI Variable Display','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}.mono{font-family:'JetBrains Mono','Cascadia Code',ui-monospace,Consolas,Menlo,monospace}
+.n{font-size:86px;font-weight:600;letter-spacing:-3px;fill:none;stroke:#00D4FF;stroke-width:1.3}
+.s{font-size:13px;letter-spacing:2.4px;fill:#6B7790}
+.t{font-size:42px;font-weight:600;letter-spacing:-1.2px;fill:#E8EDF5}
+.m{font-size:13px;letter-spacing:2.2px;fill:#6B7790}
+.draw{transform-box:fill-box;transform-origin:0 50%;animation:draw 1.2s cubic-bezier(.6,0,.2,1) .2s both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.draw{animation:none}}
+</style>
+<text class="sans n" x="2" y="92">02</text>
+<text class="mono s" x="136" y="40">SHEET 02 / 05</text>
+<text class="sans t" x="134" y="88">Selected work</text>
+<text class="mono m" x="1278" y="88" text-anchor="end">4 PROJECTS · 1 FEATURED</text>
+<path d="M0.5 102V110M40.5 106V110M80.5 106V110M120.5 106V110M160.5 106V110M200.5 102V110M240.5 106V110M280.5 106V110M320.5 106V110M360.5 106V110M400.5 102V110M440.5 106V110M480.5 106V110M520.5 106V110M560.5 106V110M600.5 102V110M640.5 106V110M680.5 106V110M720.5 106V110M760.5 106V110M800.5 102V110M840.5 106V110M880.5 106V110M920.5 106V110M960.5 106V110M1000.5 102V110M1040.5 106V110M1080.5 106V110M1120.5 106V110M1160.5 106V110M1200.5 102V110M1240.5 106V110M1280.5 106V110" stroke="#1E2636"/>
+<path d="M0 110.5H1280" stroke="#1E2636"/>
+<rect class="draw" x="0" y="109" width="420" height="3" fill="#00D4FF"/>
+</svg>

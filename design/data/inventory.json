@@ -1,0 +1,319 @@
+{
+  "generated": "2026-11-06",
+  "projects": 25,
+  "technologies": 52,
+  "languageCount": 6,
+  "totalBytes": 8936504,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 8064712
+    },
+    {
+      "name": "Astro",
+      "bytes": 264067
+    },
+    {
+      "name": "CSS",
+      "bytes": 221592
+    },
+    {
+      "name": "Python",
+      "bytes": 216581
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 135929
+    },
+    {
+      "name": "HTML",
+      "bytes": 20796
+    },
+    {
+      "name": "Shell",
+      "bytes": 7007
+    },
+    {
+      "name": "Dockerfile",
+      "bytes": 3920
+    },
+    {
+      "name": "PLpgSQL",
+      "bytes": 797
+    },
+    {
+      "name": "Batchfile",
+      "bytes": 418
+    },
+    {
+      "name": "Makefile",
+      "bytes": 400
+    },
+    {
+      "name": "Gherkin",
+      "bytes": 285
+    }
+  ],
+  "techs": [
+    {
+      "name": "TypeScript",
+      "type": "Language",
+      "qty": 15
+    },
+    {
+      "name": "Node.js",
+      "type": "Runtime",
+      "qty": 14
+    },
+    {
+      "name": "React",
+      "type": "Library",
+      "qty": 14
+    },
+    {
+      "name": "JavaScript",
+      "type": "Language",
+      "qty": 13
+    },
+    {
+      "name": "CSS",
+      "type": "Language",
+      "qty": 11
+    },
+    {
+      "name": "npm",
+      "type": "Tooling",
+      "qty": 10
+    },
+    {
+      "name": "Tailwind CSS",
+      "type": "Styling",
+      "qty": 10
+    },
+    {
+      "name": "Zod",
+      "type": "Validation",
+      "qty": 9
+    },
+    {
+      "name": "Python",
+      "type": "Language",
+      "qty": 7
+    },
+    {
+      "name": "shadcn/ui",
+      "type": "UI",
+      "qty": 7
+    },
+    {
+      "name": "pnpm",
+      "type": "Tooling",
+      "qty": 6
+    },
+    {
+      "name": "Astro",
+      "type": "Framework",
+      "qty": 5
+    },
+    {
+      "name": "Docker",
+      "type": "Infra",
+      "qty": 5
+    },
+    {
+      "name": "ESLint",
+      "type": "Tooling",
+      "qty": 5
+    },
+    {
+      "name": "JWT",
+      "type": "Security",
+      "qty": 5
+    },
+    {
+      "name": "Next.js",
+      "type": "Framework",
+      "qty": 5
+    },
+    {
+      "name": "HTML",
+      "type": "Language",
+      "qty": 4
+    },
+    {
+      "name": "Expo",
+      "type": "Mobile",
+      "qty": 3
+    },
+    {
+      "name": "MongoDB",
+      "type": "Database",
+      "qty": 3
+    },
+    {
+      "name": "React Native",
+      "type": "Mobile",
+      "qty": 3
+    },
+    {
+      "name": "Zustand",
+      "type": "State",
+      "qty": 3
+    },
+    {
+      "name": "esbuild",
+      "type": "Tooling",
+      "qty": 2
+    },
+    {
+      "name": "Express",
+      "type": "Backend",
+      "qty": 2
+    },
+    {
+      "name": "Flask",
+      "type": "Backend",
+      "qty": 2
+    },
+    {
+      "name": "Matplotlib",
+      "type": "Data viz",
+      "qty": 2
+    },
+    {
+      "name": "Motion",
+      "type": "Animation",
+      "qty": 2
+    },
+    {
+      "name": "NumPy",
+      "type": "Data",
+      "qty": 2
+    },
+    {
+      "name": "React Router",
+      "type": "Library",
+      "qty": 2
+    },
+    {
+      "name": "Vitest",
+      "type": "Testing",
+      "qty": 2
+    },
+    {
+      "name": "Anime.js",
+      "type": "Animation",
+      "qty": 1
+    },
+    {
+      "name": "Behave (BDD)",
+      "type": "Testing",
+      "qty": 1
+    },
+    {
+      "name": "Bluetooth LE",
+      "type": "Hardware",
+      "qty": 1
+    },
+    {
+      "name": "Capacitor",
+      "type": "Mobile",
+      "qty": 1
+    },
+    {
+      "name": "Electron",
+      "type": "Desktop",
+      "qty": 1
+    },
+    {
+      "name": "Fastify",
+      "type": "Backend",
+      "qty": 1
+    },
+    {
+      "name": "Gemini API",
+      "type": "AI",
+      "qty": 1
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "Infra",
+      "qty": 1
+    },
+    {
+      "name": "IndexedDB",
+      "type": "Database",
+      "qty": 1
+    },
+    {
+      "name": "Jest",
+      "type": "Testing",
+      "qty": 1
+    },
+    {
+      "name": "MediaPipe",
+      "type": "AI",
+      "qty": 1
+    },
+    {
+      "name": "MinIO",
+      "type": "Storage",
+      "qty": 1
+    },
+    {
+      "name": "Nanostores",
+      "type": "State",
+      "qty": 1
+    },
+    {
+      "name": "Nginx",
+      "type": "Infra",
+      "qty": 1
+    },
+    {
+      "name": "Playwright",
+      "type": "Testing",
+      "qty": 1
+    },
+    {
+      "name": "PostgreSQL",
+      "type": "Database",
+      "qty": 1
+    },
+    {
+      "name": "Prettier",
+      "type": "Tooling",
+      "qty": 1
+    },
+    {
+      "name": "Prisma",
+      "type": "Database",
+      "qty": 1
+    },
+    {
+      "name": "pytest",
+      "type": "Testing",
+      "qty": 1
+    },
+    {
+      "name": "Shell",
+      "type": "Language",
+      "qty": 1
+    },
+    {
+      "name": "Supabase",
+      "type": "Database",
+      "qty": 1
+    },
+    {
+      "name": "SymPy",
+      "type": "Data",
+      "qty": 1
+    },
+    {
+      "name": "Vite",
+      "type": "Tooling",
+      "qty": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="150" viewBox="0 0 1280 150" role="img" aria-label="Title block. Developer identity, drawn by Josué Rincón, revision 2026.11. Status: always in progress.">
+<style>.sans{font-family:'Inter','Segoe UI Variable Display','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}.mono{font-family:'JetBrains Mono','Cascadia Code',ui-monospace,Consolas,Menlo,monospace}
+.k{font-size:12px;letter-spacing:2px;fill:#66728A}
+.v{font-size:19px;letter-spacing:1.4px;fill:#090B10}
+.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
+@media (prefers-reduced-motion:reduce){.led{display:none}}
+</style>
+<rect x="1" y="20" width="1278" height="110" rx="10" fill="#FFFFFF" stroke="#D3DAE6" stroke-width="2"/>
+<text class="mono k" x="28" y="58">PROJECT</text><text class="mono v" x="28" y="96">DEVELOPER IDENTITY</text>
+<path d="M340.5 20V130" stroke="#D3DAE6"/><text class="mono k" x="368" y="58">DRAWN BY</text><text class="mono v" x="368" y="96">JOSUÉ RINCÓN</text>
+<path d="M620.5 20V130" stroke="#D3DAE6"/><text class="mono k" x="648" y="58">REV</text><text class="mono v" x="648" y="96">2026.11</text>
+<path d="M780.5 20V130" stroke="#D3DAE6"/><text class="mono k" x="808" y="58">SHEETS</text><text class="mono v" x="808" y="96">05</text>
+<path d="M940.5 20V130" stroke="#D3DAE6"/><text class="mono k" x="968" y="58">STATUS</text><circle cx="973" cy="90" r="5" fill="#0077B6"/><circle class="led" cx="973" cy="90" r="5" fill="#0077B6"/><text class="mono v" x="988" y="96">ALWAYS IN PROGRESS</text>
+<path d="M1 20h22M1 20v22M1279 130h-22M1279 130v-22" stroke="#0077B6" stroke-width="2" fill="none"/>
+</svg>

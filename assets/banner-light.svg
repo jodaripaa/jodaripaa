@@ -1,84 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="Josué Rincón — Software Engineering Student, Product Builder. Building ideas into technology.">
-  <defs>
-    <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M16 0H0V16" fill="none" stroke="#E9EDF4" stroke-width=".5"/>
-    </pattern>
-    <pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
-      <rect width="80" height="80" fill="url(#minor)"/>
-      <path d="M80 0H0V80" fill="none" stroke="#D3DAE6" stroke-width="1"/>
-    </pattern>
-    <linearGradient id="fade" x1="0" x2="1">
-      <stop offset="0" stop-color="#F6F8FB" stop-opacity=".96"/>
-      <stop offset=".55" stop-color="#F6F8FB" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#F6F8FB" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <style>
-    .sans { font-family: 'Inter', 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
-    .mono { font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, Consolas, Menlo, monospace; }
-    .name { font-size: 68px; font-weight: 600; letter-spacing: -2px; fill: #090B10; }
-    .role { font-size: 15px; letter-spacing: 3.2px; fill: #0077B6; }
-    .tag  { font-size: 24px; font-weight: 400; fill: #090B10; opacity: .78; }
-    .note { font-size: 11px; letter-spacing: 1.6px; fill: #66728A; }
-    .line { stroke: #0077B6; fill: none; }
-    .dim  { stroke: #66728A; fill: none; stroke-width: 1; }
-    .node { fill: #F6F8FB; stroke: #0077B6; stroke-width: 1.5; }
-    .node2 { fill: #F6F8FB; stroke: #3A50E0; stroke-width: 1.5; }
-    .lbl { font-size: 12px; letter-spacing: 1.4px; fill: #090B10; }
-    .pulse { stroke: #0077B6; stroke-width: 2.5; fill: none; stroke-linecap: round;
-             stroke-dasharray: 26 900; stroke-dashoffset: 26; animation: travel 5s cubic-bezier(.6,0,.3,1) infinite; }
-    @keyframes travel { 0% { stroke-dashoffset: 26; opacity: 0; } 8% { opacity: 1; } 70% { stroke-dashoffset: -560; opacity: 1; } 78%, 100% { stroke-dashoffset: -560; opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: 0; } }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-label="Josué Rincón. Software engineering student, product builder, full-stack developer, AI and HCI explorer. Building ideas into technology. 25 projects, 52 technologies.">
+<defs>
+<pattern id="mi" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#E9EDF4" stroke-width=".5"/></pattern>
+<pattern id="ma" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="url(#mi)"/><path d="M80 0H0V80" fill="none" stroke="#D3DAE6"/></pattern>
+<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#F6F8FB" stop-opacity=".97"/><stop offset=".55" stop-color="#F6F8FB" stop-opacity=".7"/><stop offset="1" stop-color="#F6F8FB" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow" cx="955" cy="245" r="330" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0077B6" stop-opacity=".10"/><stop offset="1" stop-color="#0077B6" stop-opacity="0"/></radialGradient>
+<linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="#0077B6" stop-opacity="0"/><stop offset=".5" stop-color="#0077B6" stop-opacity=".06"/><stop offset="1" stop-color="#0077B6" stop-opacity="0"/></linearGradient>
+<clipPath id="frame"><rect x="25" y="25" width="1230" height="450"/></clipPath>
+</defs>
+<style>.sans{font-family:'Inter','Segoe UI Variable Display','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}.mono{font-family:'JetBrains Mono','Cascadia Code',ui-monospace,Consolas,Menlo,monospace}
+.lbl{font-size:12px;letter-spacing:1.8px;fill:#66728A}
+.rl{font-size:9px;letter-spacing:1px;fill:#66728A;opacity:.75}
+.chip{font-size:12px;letter-spacing:1.8px;fill:#0077B6}
+.name{font-size:84px;font-weight:650;letter-spacing:-2.8px;fill:#090B10}
+.rp{font-size:16px;letter-spacing:3.4px;fill:#66728A}
+.role{font-size:16px;letter-spacing:3.4px;fill:#0077B6}
+.tag{font-size:30px;fill:#090B10;opacity:.82}
+.num{font-size:36px;font-weight:600;letter-spacing:-.5px;fill:#090B10}
+.cap{font-size:11px;letter-spacing:1.8px;fill:#66728A}
+.lys{font-size:14px;fill:#090B10;opacity:.85}
+.eng{font-size:12px;letter-spacing:3px}
+.dim{font-size:11px;letter-spacing:3px;fill:#0077B6}
+.tb{font-size:10px;letter-spacing:1.6px;fill:#66728A}
+.tv{font-size:13px;letter-spacing:1px;fill:#090B10}
+.scan{animation:scan 9s linear infinite}
+@keyframes scan{from{transform:translateX(-220px)}to{transform:translateX(1500px)}}
+.draw{stroke-dasharray:520;stroke-dashoffset:520;animation:draw 1.6s cubic-bezier(.6,0,.2,1) .4s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.wipe{clip-path:inset(0 100% 0 0);animation:wipe 1.4s cubic-bezier(.6,0,.2,1) 1s forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.rw{opacity:0;animation:role 12s infinite}
+@keyframes role{0%{opacity:0;transform:translateY(10px)}3%,22%{opacity:1;transform:translateY(0)}25%,100%{opacity:0;transform:translateY(-10px)}}
+.in{opacity:0;animation:in .7s ease-out forwards}
+@keyframes in{to{opacity:1}}
+.float{animation:float 6s ease-in-out infinite alternate}
+@keyframes float{from{transform:translateY(-4px)}to{transform:translateY(4px)}}
+.glow{opacity:0;animation:glow 6s ease-out infinite}
+@keyframes glow{0%{opacity:0}6%{opacity:1}30%,100%{opacity:0}}
+.beam{stroke-dasharray:26 400;stroke-dashoffset:26;animation:beam 6s cubic-bezier(.5,0,.4,1) infinite}
+@keyframes beam{0%{stroke-dashoffset:26;opacity:0}4%{opacity:1}46%{stroke-dashoffset:-238;opacity:1}52%,100%{stroke-dashoffset:-238;opacity:0}}
+.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
+@media (prefers-reduced-motion:reduce){.scan,.beam,.glow,.led{display:none}.draw{animation:none;stroke-dashoffset:0}.wipe{animation:none;clip-path:none}.in{animation:none;opacity:1}.float,.rw{animation:none}.r0{opacity:1}}
+</style>
+<rect width="1280" height="500" fill="#F6F8FB"/>
+<rect width="1280" height="500" fill="url(#ma)"/>
+<rect width="1280" height="500" fill="url(#glow)"/>
+<rect width="780" height="500" fill="url(#fade)"/>
+<g clip-path="url(#frame)"><rect class="scan" x="0" y="25" width="200" height="450" fill="url(#scan)"/></g>
+<rect x="24.5" y="24.5" width="1231" height="451" fill="none" stroke="#D3DAE6"/>
+<path d="M40 25V29M56 25V29M72 25V29M88 25V29M104 25V29M120 25V29M136 25V29M152 25V29M168 25V29M184 25V29M200 25V29M216 25V29M232 25V29M248 25V29M264 25V29M280 25V29M296 25V29M312 25V29M328 25V29M344 25V29M360 25V29M376 25V29M392 25V29M408 25V29M424 25V29M440 25V29M456 25V29M472 25V29M488 25V29M504 25V29M520 25V29M536 25V29M552 25V29M568 25V29M584 25V29M600 25V29M616 25V29M632 25V29M648 25V29M664 25V29M680 25V29M696 25V29M712 25V29M728 25V29M744 25V29M760 25V29M776 25V29M792 25V29M808 25V29M824 25V29M840 25V29M856 25V29M872 25V29M888 25V29M904 25V29M920 25V29M936 25V29M952 25V29M968 25V29M984 25V29M1000 25V29M1016 25V29M1032 25V29M1048 25V29M1064 25V29M1080 25V29M1096 25V29M1112 25V29M1128 25V29M1144 25V29M1160 25V29M1176 25V29M1192 25V29M1208 25V29M1224 25V29M1240 25V29M25 40H29M25 56H29M25 72H29M25 88H29M25 104H29M25 120H29M25 136H29M25 152H29M25 168H29M25 184H29M25 200H29M25 216H29M25 232H29M25 248H29M25 264H29M25 280H29M25 296H29M25 312H29M25 328H29M25 344H29M25 360H29M25 376H29M25 392H29M25 408H29M25 424H29M25 440H29M25 456H29" stroke="#D3DAE6"/>
 
-  <rect width="1280" height="420" fill="#F6F8FB"/>
-  <rect width="1280" height="420" fill="url(#major)"/>
-  <rect width="760" height="420" fill="url(#fade)"/>
-
-  <!-- marco de plano -->
-  <rect x="24.5" y="24.5" width="1231" height="371" fill="none" stroke="#D3DAE6"/>
-  <g class="dim" stroke-width="1.2">
-    <path d="M24 44V24h20M1236 24h20v20M24 376v20h20M1236 396h20v-20" stroke="#0077B6"/>
-  </g>
-
-  <!-- identidad -->
-  <text class="mono note" x="72" y="92">FIG. 00 — DEVELOPER IDENTITY</text>
-  <text class="sans name" x="68" y="176">Josué Rincón</text>
-  <text class="mono role" x="72" y="216">SOFTWARE ENGINEERING STUDENT · PRODUCT BUILDER</text>
-  <text class="sans tag" x="72" y="282">Building ideas into technology.</text>
-
-  <!-- cota bajo el nombre -->
-  <g class="dim">
-    <path d="M72 312V300M512 312V300M72 306H512"/>
-    <path d="M72 306l7-3v6zM512 306l-7-3v6z" fill="#66728A" stroke="none"/>
-  </g>
-  <text class="mono note" x="292" y="330" text-anchor="middle">FESC · COLOMBIA</text>
-
-  <!-- esquema: idea → sistema → producto -->
-  <g transform="translate(0,0)">
-    <path class="line" d="M800 210H900M960 210C1000 210 1000 140 1040 140M960 210C1000 210 1000 280 1040 280M1100 140C1140 140 1140 210 1160 210M1100 280C1140 280 1140 210 1160 210" stroke-width="1.2" opacity=".55"/>
-    <path class="pulse" d="M800 210H900M900 210H960C1000 210 1000 140 1040 140H1100C1140 140 1140 210 1160 210"/>
-
-    <circle class="node" cx="790" cy="210" r="10"/>
-    <rect class="node" x="900" y="186" width="60" height="48" rx="4"/>
-    <rect class="node2" x="1040" y="118" width="60" height="44" rx="4"/>
-    <rect class="node2" x="1040" y="258" width="60" height="44" rx="4"/>
-    <circle class="node" cx="1172" cy="210" r="12"/>
-    <circle cx="1172" cy="210" r="4" fill="#0077B6"/>
-
-    <text class="mono lbl" x="790" y="250" text-anchor="middle">IDEA</text>
-    <text class="mono lbl" x="930" y="256" text-anchor="middle">SYSTEM</text>
-    <text class="mono note" x="1070" y="106" text-anchor="middle">INTERFACE</text>
-    <text class="mono note" x="1070" y="324" text-anchor="middle">DATA</text>
-    <text class="mono lbl" x="1172" y="250" text-anchor="middle">PRODUCT</text>
-  </g>
-
-  <!-- cajetín -->
-  <g class="mono">
-    <path d="M1000 350.5H1255.5M1000 350.5V395.5M1128 350.5V395.5" stroke="#D3DAE6" fill="none"/>
-    <text class="note" x="1012" y="368">DWG</text>
-    <text class="lbl" x="1012" y="386">JR-001</text>
-    <text class="note" x="1140" y="368">REV</text>
-    <text class="lbl" x="1140" y="386">2026.11</text>
-  </g>
+<path d="M25 47V25h22M1233 25h22v22M25 453v22h22M1233 475h22v-22" fill="none" stroke="#0077B6" stroke-width="1.5"/>
+<text class="mono lbl" x="72" y="88">FIG. 00 — DEVELOPER IDENTITY</text>
+<text class="mono lbl" x="1232" y="88" text-anchor="end">SHEET 01 / 05</text>
+<g class="in" style="animation-delay:.1s">
+<rect x="72.5" y="110.5" width="330" height="28" rx="14" fill="none" stroke="#0077B6" stroke-opacity=".45"/>
+<circle cx="90" cy="124.5" r="4" fill="#0077B6"/><circle class="led" cx="90" cy="124.5" r="4" fill="#0077B6"/>
+<text class="mono chip" x="104" y="129">BUILDING · SYNDES + ANILLO LAB</text>
+</g>
+<text class="sans name in" style="animation-delay:.2s" x="68" y="222">Josué Rincón</text>
+<path d="M72 244V256M592 244V256" stroke="#66728A"/>
+<path class="draw" d="M72 250H592" stroke="#0077B6" stroke-width="1.5"/>
+<path class="in" style="animation-delay:1.7s" d="M72 250l8-3.5v7zM592 250l-8-3.5v7z" fill="#0077B6"/>
+<text class="mono rp" x="72" y="290">ROLE /</text>
+<text class="mono role rw r0" style="animation-delay:0s" x="168" y="290">SOFTWARE ENGINEERING STUDENT</text><text class="mono role rw" style="animation-delay:3s" x="168" y="290">PRODUCT BUILDER</text><text class="mono role rw" style="animation-delay:6s" x="168" y="290">FULL-STACK DEVELOPER</text><text class="mono role rw" style="animation-delay:9s" x="168" y="290">AI &amp; HCI EXPLORER</text>
+<text class="sans tag wipe" x="72" y="346">Building ideas into technology.</text>
+<path d="M72 380.5H690M72 380V374M232 380V374M392 380V374M552 380V374" stroke="#D3DAE6"/>
+<g class="in" style="animation-delay:1.50s"><text class="sans num" x="72" y="426">25</text><text class="mono cap" x="72" y="450">PROJECTS</text></g><g class="in" style="animation-delay:1.65s"><path d="M210 398V448" stroke="#D3DAE6"/><text class="sans num" x="232" y="426">52</text><text class="mono cap" x="232" y="450">TECHNOLOGIES</text></g><g class="in" style="animation-delay:1.80s"><path d="M370 398V448" stroke="#D3DAE6"/><text class="sans num" x="392" y="426">6</text><text class="mono cap" x="392" y="450">LANGUAGES</text></g><g class="in" style="animation-delay:1.95s"><path d="M530 398V448" stroke="#D3DAE6"/><text class="sans num" x="552" y="426">2023</text><text class="mono cap" x="552" y="450">BUILDING SINCE</text></g>
+<g class="float">
+<g stroke="#D3DAE6" stroke-dasharray="2 5"><path d="M835 120V368M1075 120V368M955 180V428"/></g>
+<path d="M955 360V120" stroke="#0077B6" stroke-opacity=".35" stroke-dasharray="2 6"/>
+<g>
+<polygon points="835,360 955,420 955,428 835,368" fill="#E6ECF5" stroke="#66728A" stroke-opacity=".6"/>
+<polygon points="955,420 1075,360 1075,368 955,428" fill="#E6ECF5" stroke="#66728A" stroke-opacity=".6"/>
+<polygon points="955,300 1075,360 955,420 835,360" fill="#FFFFFF" stroke="#66728A" stroke-opacity=".6" stroke-width="1.4"/>
+<polygon points="955,322.8 1029.4,360 955,397.2 880.6,360" fill="none" stroke="#D3DAE6" stroke-dasharray="3 4"/>
+<text class="mono eng" fill="#66728A" transform="matrix(.894 .447 -.894 .447 864 364)">DEVICE</text>
+<polygon class="glow" style="animation-delay:0.00s" points="955,300 1075,360 955,420 835,360" fill="#0077B6" fill-opacity=".1" stroke="#0077B6" stroke-width="2"/>
+<circle cx="1075" cy="360" r="3" fill="#66728A"/>
+<path d="M1081 360H1101" stroke="#66728A"/>
+<text class="mono cap" x="1107" y="356">LAYER 01</text>
+<text class="sans lys" x="1107" y="375">Electron · BLE</text>
+</g>
+<g>
+<polygon points="835,280 955,340 955,348 835,288" fill="#E6ECF5" stroke="#66728A" stroke-opacity=".6"/>
+<polygon points="955,340 1075,280 1075,288 955,348" fill="#E6ECF5" stroke="#66728A" stroke-opacity=".6"/>
+<polygon points="955,220 1075,280 955,340 835,280" fill="#FFFFFF" stroke="#66728A" stroke-opacity=".6" stroke-width="1.4"/>
+<polygon points="955,242.8 1029.4,280 955,317.2 880.6,280" fill="none" stroke="#D3DAE6" stroke-dasharray="3 4"/>
+<text class="mono eng" fill="#66728A" transform="matrix(.894 .447 -.894 .447 864 284)">DATA</text>
+<polygon class="glow" style="animation-delay:0.92s" points="955,220 1075,280 955,340 835,280" fill="#0077B6" fill-opacity=".1" stroke="#0077B6" stroke-width="2"/>
+<circle cx="1075" cy="280" r="3" fill="#66728A"/>
+<path d="M1081 280H1101" stroke="#66728A"/>
+<text class="mono cap" x="1107" y="276">LAYER 02</text>
+<text class="sans lys" x="1107" y="295">MongoDB · SQL</text>
+</g>
+<g>
+<polygon points="835,200 955,260 955,268 835,208" fill="#E6ECF5" stroke="#3A50E0" stroke-opacity="1"/>
+<polygon points="955,260 1075,200 1075,208 955,268" fill="#E6ECF5" stroke="#3A50E0" stroke-opacity="1"/>
+<polygon points="955,140 1075,200 955,260 835,200" fill="#FFFFFF" stroke="#3A50E0" stroke-opacity="1" stroke-width="1.4"/>
+<polygon points="955,162.8 1029.4,200 955,237.2 880.6,200" fill="none" stroke="#D3DAE6" stroke-dasharray="3 4"/>
+<text class="mono eng" fill="#3A50E0" transform="matrix(.894 .447 -.894 .447 864 204)">LOGIC</text>
+<polygon class="glow" style="animation-delay:1.84s" points="955,140 1075,200 955,260 835,200" fill="#0077B6" fill-opacity=".1" stroke="#0077B6" stroke-width="2"/>
+<circle cx="1075" cy="200" r="3" fill="#3A50E0"/>
+<path d="M1081 200H1101" stroke="#66728A"/>
+<text class="mono cap" x="1107" y="196">LAYER 03</text>
+<text class="sans lys" x="1107" y="215">Node.js · APIs</text>
+</g>
+<g>
+<polygon points="835,120 955,180 955,188 835,128" fill="#E6ECF5" stroke="#0077B6" stroke-opacity="1"/>
+<polygon points="955,180 1075,120 1075,128 955,188" fill="#E6ECF5" stroke="#0077B6" stroke-opacity="1"/>
+<polygon points="955,60 1075,120 955,180 835,120" fill="#FFFFFF" stroke="#0077B6" stroke-opacity="1" stroke-width="1.4"/>
+<polygon points="955,82.8 1029.4,120 955,157.2 880.6,120" fill="none" stroke="#D3DAE6" stroke-dasharray="3 4"/>
+<text class="mono eng" fill="#0077B6" transform="matrix(.894 .447 -.894 .447 864 124)">INTERFACE</text>
+<polygon class="glow" style="animation-delay:2.76s" points="955,60 1075,120 955,180 835,120" fill="#0077B6" fill-opacity=".1" stroke="#0077B6" stroke-width="2"/>
+<circle cx="1075" cy="120" r="3" fill="#0077B6"/>
+<path d="M1081 120H1101" stroke="#66728A"/>
+<text class="mono cap" x="1107" y="116">LAYER 04</text>
+<text class="sans lys" x="1107" y="135">React · Astro</text>
+</g>
+<path class="beam" d="M955 360V120" stroke="#0077B6" stroke-width="3" stroke-linecap="round" fill="none"/>
+<g stroke="#66728A" stroke-opacity=".8"><path d="M798 120H829M798 360H829M808 126V354"/></g>
+<path d="M808 120l-3.5 8h7zM808 360l-3.5-8h7z" fill="#66728A"/>
+<text class="mono dim" transform="rotate(-90 796 240)" x="796" y="240" text-anchor="middle">FULL STACK</text>
+</g>
+<path d="M1064 425.5H1255M1064.5 425V475M1160.5 425V475" stroke="#D3DAE6"/>
+<text class="mono tb" x="1076" y="443">DWG</text><text class="mono tv" x="1076" y="463">JR-001</text>
+<text class="mono tb" x="1172" y="443">REV</text><text class="mono tv" x="1172" y="463">2026.11</text>
 </svg>

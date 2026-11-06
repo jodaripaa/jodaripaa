@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="240" viewBox="0 0 1280 240" role="img" aria-label="YPRI, talent at a tap. Concept. A mobile marketplace that connects people who need a service with professionals who offer it.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="310" viewBox="0 0 1280 310" role="img" aria-label="YPRI, talent at a tap. Concept. A mobile marketplace that connects people who need a service with the professionals who offer it. Lifecycle: request, match, quote, pay, track, rate.">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9z" fill="#6B7790"/></marker>
+  </defs>
   <style>
     .sans { font-family: 'Inter', 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
     .mono { font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, Consolas, Menlo, monospace; }
@@ -6,12 +9,16 @@
     .title { font-size: 46px; font-weight: 600; letter-spacing: -1px; fill: #E8EDF5; }
     .sub { font-size: 22px; fill: #6B7790; }
     .body { font-size: 24px; fill: #E8EDF5; opacity: .8; }
-    .k { font-size: 15px; letter-spacing: 2px; fill: #6B7790; }
-    .v { font-size: 20px; fill: #E8EDF5; }
-    .chip { font-size: 14px; letter-spacing: 1.8px; }
+    .k { font-size: 14px; letter-spacing: 2px; fill: #6B7790; }
+    .v { font-size: 19px; fill: #E8EDF5; }
+    .chip { font-size: 13px; letter-spacing: 1.8px; }
+    .st { font-size: 13px; letter-spacing: 1.8px; fill: #E8EDF5; }
+    .link { stroke-dasharray: 5 5; animation: march 1.2s linear infinite; }
+    @keyframes march { to { stroke-dashoffset: -20; } }
+    @media (prefers-reduced-motion: reduce) { .link { animation: none; } }
   </style>
   <!-- borde discontinuo: en un plano, lo que aún no está construido -->
-  <rect x="1" y="1" width="1278" height="238" rx="14" fill="none" stroke="#6B7790" stroke-width="2" stroke-dasharray="10 8" opacity=".7"/>
+  <rect x="1" y="1" width="1278" height="308" rx="14" fill="none" stroke="#6B7790" stroke-width="2" stroke-dasharray="10 8" opacity=".7"/>
 
   <text class="mono fig" x="40" y="44">FIG. 04 — PRODUCT CONCEPT</text>
   <rect x="1078" y="22" width="162" height="30" rx="15" fill="none" stroke="#6B7790" stroke-width="1.5" stroke-dasharray="4 4"/>
@@ -19,15 +26,40 @@
   <text class="mono chip" x="1112" y="42" fill="#6B7790">CONCEPT</text>
 
   <text class="sans title" x="40" y="118">YPRI</text>
-  <text class="sans sub" x="168" y="118">talent at a tap</text>
-  <text class="sans body" x="40" y="166">A mobile marketplace that connects people who need</text>
-  <text class="sans body" x="40" y="198">a service with the professionals who offer it.</text>
+  <text class="sans sub" x="176" y="118">talent at a tap</text>
+  <text class="sans body" x="40" y="164">A mobile marketplace that connects people who need</text>
+  <text class="sans body" x="40" y="196">a service with the professionals who offer it.</text>
 
   <path d="M800 84V204" stroke="#1E2636" stroke-width="1.5"/>
   <g class="mono">
     <text class="k" x="840" y="104">DESIGNING</text>
     <text class="v" x="840" y="134">Verified profiles · geolocation</text>
-    <text class="v" x="840" y="164">Quotes · payments · chat</text>
-    <text class="v" x="840" y="194">Tracking · ratings</text>
+    <text class="v" x="840" y="164">Chat · notifications · ratings</text>
+    <text class="v" x="840" y="194">Mobile app + REST API</text>
+  </g>
+
+  <!-- ciclo del servicio -->
+  <g stroke="#6B7790" stroke-width="1.5" fill="none">
+    <path class="link" d="M196 252H244" marker-end="url(#a)"/>
+    <path class="link" d="M406 252H454" marker-end="url(#a)"/>
+    <path class="link" d="M616 252H664" marker-end="url(#a)"/>
+    <path class="link" d="M826 252H874" marker-end="url(#a)"/>
+    <path class="link" d="M1036 252H1084" marker-end="url(#a)"/>
+  </g>
+  <g fill="none" stroke="#6B7790" stroke-width="1.5" stroke-dasharray="6 5">
+    <rect x="40" y="232" width="150" height="40" rx="20"/>
+    <rect x="250" y="232" width="150" height="40" rx="20"/>
+    <rect x="460" y="232" width="150" height="40" rx="20"/>
+    <rect x="670" y="232" width="150" height="40" rx="20"/>
+    <rect x="880" y="232" width="150" height="40" rx="20"/>
+    <rect x="1090" y="232" width="150" height="40" rx="20"/>
+  </g>
+  <g class="mono" text-anchor="middle">
+    <text class="st" x="115" y="257">REQUEST</text>
+    <text class="st" x="325" y="257">MATCH</text>
+    <text class="st" x="535" y="257">QUOTE</text>
+    <text class="st" x="745" y="257">PAY</text>
+    <text class="st" x="955" y="257">TRACK</text>
+    <text class="st" x="1165" y="257">RATE</text>
   </g>
 </svg>
