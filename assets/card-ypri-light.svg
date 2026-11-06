@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="240" viewBox="0 0 1280 240" role="img" aria-label="YPRI, talent at a tap. Concept. A mobile marketplace that connects people who need a service with professionals who offer it.">
+  <style>
+    .sans { font-family: 'Inter', 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, Consolas, Menlo, monospace; }
+    .fig { font-size: 15px; letter-spacing: 2px; fill: #66728A; }
+    .title { font-size: 46px; font-weight: 600; letter-spacing: -1px; fill: #090B10; }
+    .sub { font-size: 22px; fill: #66728A; }
+    .body { font-size: 24px; fill: #090B10; opacity: .8; }
+    .k { font-size: 15px; letter-spacing: 2px; fill: #66728A; }
+    .v { font-size: 20px; fill: #090B10; }
+    .chip { font-size: 14px; letter-spacing: 1.8px; }
+  </style>
+  <!-- borde discontinuo: en un plano, lo que aún no está construido -->
+  <rect x="1" y="1" width="1278" height="238" rx="14" fill="none" stroke="#66728A" stroke-width="2" stroke-dasharray="10 8" opacity=".7"/>
+
+  <text class="mono fig" x="40" y="44">FIG. 04 — PRODUCT CONCEPT</text>
+  <rect x="1078" y="22" width="162" height="30" rx="15" fill="none" stroke="#66728A" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="1098" cy="37" r="5" fill="none" stroke="#66728A" stroke-width="1.5"/>
+  <text class="mono chip" x="1112" y="42" fill="#66728A">CONCEPT</text>
+
+  <text class="sans title" x="40" y="118">YPRI</text>
+  <text class="sans sub" x="168" y="118">talent at a tap</text>
+  <text class="sans body" x="40" y="166">A mobile marketplace that connects people who need</text>
+  <text class="sans body" x="40" y="198">a service with the professionals who offer it.</text>
+
+  <path d="M800 84V204" stroke="#D3DAE6" stroke-width="1.5"/>
+  <g class="mono">
+    <text class="k" x="840" y="104">DESIGNING</text>
+    <text class="v" x="840" y="134">Verified profiles · geolocation</text>
+    <text class="v" x="840" y="164">Quotes · payments · chat</text>
+    <text class="v" x="840" y="194">Tracking · ratings</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-label="Anillo Lab. Prototype, software. Control the computer with hand gestures. Today: Electron app with webcam gestures. Next: wearable ring with ESP32, IMU and BLE.">
+  <defs>
+    <pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#121826" stroke-width=".5"/></pattern>
+  </defs>
+  <style>
+    .sans { font-family: 'Inter', 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, Consolas, Menlo, monospace; }
+    .fig { font-size: 15px; letter-spacing: 1.8px; fill: #6B7790; }
+    .title { font-size: 46px; font-weight: 600; letter-spacing: -1px; fill: #E8EDF5; }
+    .body { font-size: 24px; fill: #E8EDF5; opacity: .8; }
+    .k { font-size: 15px; letter-spacing: 1.8px; fill: #6B7790; }
+    .v { font-size: 22px; fill: #E8EDF5; }
+    .chip { font-size: 14px; letter-spacing: 1.6px; }
+    .stack { font-size: 15px; letter-spacing: 1.6px; fill: #00D4FF; }
+  </style>
+  <rect x="1" y="1" width="638" height="458" rx="14" fill="#0D1119" stroke="#1E2636" stroke-width="2"/>
+  <rect x="2" y="2" width="636" height="456" rx="14" fill="url(#g)" opacity=".6"/>
+  <path d="M2 64H638" stroke="#1E2636" stroke-width="1.5"/>
+
+  <text class="mono fig" x="32" y="40">FIG. 03 — INTERACTION</text>
+  <rect x="436" y="20" width="172" height="30" rx="15" fill="none" stroke="#526BFF" stroke-width="1.5"/>
+  <circle cx="456" cy="35" r="5" fill="#526BFF"/>
+  <text class="mono chip" x="470" y="40" fill="#526BFF">PROTOTYPE</text>
+
+  <text class="sans title" x="32" y="130">Anillo Lab</text>
+  <text class="sans body" x="32" y="174">Control the computer with</text>
+  <text class="sans body" x="32" y="206">a gesture of your hand.</text>
+
+  <path d="M32 240H608" stroke="#1E2636" stroke-width="1.5"/>
+  <g class="mono">
+    <text class="k" x="32" y="276">TODAY</text>
+    <text class="v" x="160" y="276">Desktop app · webcam gestures</text>
+    <text class="k" x="32" y="316">TESTED</text>
+    <text class="v" x="160" y="316">103 logic tests on Windows</text>
+    <text class="k" x="32" y="356">NEXT</text>
+    <text class="v" x="160" y="356">Ring: ESP32 · IMU · BLE</text>
+  </g>
+  <path d="M2 400H638" stroke="#1E2636" stroke-width="1.5"/>
+  <text class="mono stack" x="32" y="434">ELECTRON · NODE.JS · JAVASCRIPT · MEDIAPIPE</text>
+</svg>

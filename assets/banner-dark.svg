@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="Josué Rincón — Software Engineering Student, Product Builder. Building ideas into technology.">
+  <defs>
+    <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#121826" stroke-width=".5"/>
+    </pattern>
+    <pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="url(#minor)"/>
+      <path d="M80 0H0V80" fill="none" stroke="#1E2636" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#090B10" stop-opacity=".96"/>
+      <stop offset=".55" stop-color="#090B10" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#090B10" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: 'Inter', 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, Consolas, Menlo, monospace; }
+    .name { font-size: 68px; font-weight: 600; letter-spacing: -2px; fill: #E8EDF5; }
+    .role { font-size: 15px; letter-spacing: 3.2px; fill: #00D4FF; }
+    .tag  { font-size: 24px; font-weight: 400; fill: #E8EDF5; opacity: .78; }
+    .note { font-size: 11px; letter-spacing: 1.6px; fill: #6B7790; }
+    .line { stroke: #00D4FF; fill: none; }
+    .dim  { stroke: #6B7790; fill: none; stroke-width: 1; }
+    .node { fill: #090B10; stroke: #00D4FF; stroke-width: 1.5; }
+    .node2 { fill: #090B10; stroke: #526BFF; stroke-width: 1.5; }
+    .lbl { font-size: 12px; letter-spacing: 1.4px; fill: #E8EDF5; }
+    .pulse { stroke: #00D4FF; stroke-width: 2.5; fill: none; stroke-linecap: round;
+             stroke-dasharray: 26 900; stroke-dashoffset: 26; animation: travel 5s cubic-bezier(.6,0,.3,1) infinite; }
+    @keyframes travel { 0% { stroke-dashoffset: 26; opacity: 0; } 8% { opacity: 1; } 70% { stroke-dashoffset: -560; opacity: 1; } 78%, 100% { stroke-dashoffset: -560; opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: 0; } }
+  </style>
+
+  <rect width="1280" height="420" fill="#090B10"/>
+  <rect width="1280" height="420" fill="url(#major)"/>
+  <rect width="760" height="420" fill="url(#fade)"/>
+
+  <!-- marco de plano -->
+  <rect x="24.5" y="24.5" width="1231" height="371" fill="none" stroke="#1E2636"/>
+  <g class="dim" stroke-width="1.2">
+    <path d="M24 44V24h20M1236 24h20v20M24 376v20h20M1236 396h20v-20" stroke="#00D4FF"/>
+  </g>
+
+  <!-- identidad -->
+  <text class="mono note" x="72" y="92">FIG. 00 — DEVELOPER IDENTITY</text>
+  <text class="sans name" x="68" y="176">Josué Rincón</text>
+  <text class="mono role" x="72" y="216">SOFTWARE ENGINEERING STUDENT · PRODUCT BUILDER</text>
+  <text class="sans tag" x="72" y="282">Building ideas into technology.</text>
+
+  <!-- cota bajo el nombre -->
+  <g class="dim">
+    <path d="M72 312V300M512 312V300M72 306H512"/>
+    <path d="M72 306l7-3v6zM512 306l-7-3v6z" fill="#6B7790" stroke="none"/>
+  </g>
+  <text class="mono note" x="292" y="330" text-anchor="middle">FESC · COLOMBIA</text>
+
+  <!-- esquema: idea → sistema → producto -->
+  <g transform="translate(0,0)">
+    <path class="line" d="M800 210H900M960 210C1000 210 1000 140 1040 140M960 210C1000 210 1000 280 1040 280M1100 140C1140 140 1140 210 1160 210M1100 280C1140 280 1140 210 1160 210" stroke-width="1.2" opacity=".55"/>
+    <path class="pulse" d="M800 210H900M900 210H960C1000 210 1000 140 1040 140H1100C1140 140 1140 210 1160 210"/>
+
+    <circle class="node" cx="790" cy="210" r="10"/>
+    <rect class="node" x="900" y="186" width="60" height="48" rx="4"/>
+    <rect class="node2" x="1040" y="118" width="60" height="44" rx="4"/>
+    <rect class="node2" x="1040" y="258" width="60" height="44" rx="4"/>
+    <circle class="node" cx="1172" cy="210" r="12"/>
+    <circle cx="1172" cy="210" r="4" fill="#00D4FF"/>
+
+    <text class="mono lbl" x="790" y="250" text-anchor="middle">IDEA</text>
+    <text class="mono lbl" x="930" y="256" text-anchor="middle">SYSTEM</text>
+    <text class="mono note" x="1070" y="106" text-anchor="middle">INTERFACE</text>
+    <text class="mono note" x="1070" y="324" text-anchor="middle">DATA</text>
+    <text class="mono lbl" x="1172" y="250" text-anchor="middle">PRODUCT</text>
+  </g>
+
+  <!-- cajetín -->
+  <g class="mono">
+    <path d="M1000 350.5H1255.5M1000 350.5V395.5M1128 350.5V395.5" stroke="#1E2636" fill="none"/>
+    <text class="note" x="1012" y="368">DWG</text>
+    <text class="lbl" x="1012" y="386">JR-001</text>
+    <text class="note" x="1140" y="368">REV</text>
+    <text class="lbl" x="1140" y="386">2026.11</text>
+  </g>
+</svg>
