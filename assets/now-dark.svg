@@ -4,7 +4,7 @@
 .hd{font-size:15px;letter-spacing:2.4px}
 .it{font-size:26px;font-weight:600;letter-spacing:-.4px;fill:#E8EDF5}
 .st{font-size:18px;fill:#6B7790}
-.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.led{opacity:0;animation:led 2s ease-out 8;transform-box:fill-box;transform-origin:center}
 @keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
 @media (prefers-reduced-motion:reduce){.led{display:none}}
 </style>

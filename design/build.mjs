@@ -5,6 +5,7 @@
 // Datos: design/data/inventory.json, que produce scripts/inventory.mjs.
 // Uso: node design/build.mjs
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
+import { banner } from "./banner.mjs";
 
 const root = new URL("../", import.meta.url);
 const inv = JSON.parse(readFileSync(new URL("design/data/inventory.json", root)));
@@ -15,10 +16,12 @@ const THEMES = {
   dark: {
     BG: "#090B10", SURFACE: "#0D1119", PLATE: "#0F1522", PLATE2: "#0A0F18", GRID: "#121826", GRID2: "#1E2636",
     TEXT: "#E8EDF5", MUTED: "#6B7790", ACCENT: "#00D4FF", BLUE: "#526BFF", GLOWOP: ".16", SCANOP: ".07",
+    BIN1: "#00D4FF", BIN1OP: ".30", BIN2: "#00D4FF", BIN2OP: ".66", BIN3: "#C9F6FF", BINW: "400", OLOP: ".55", GLOW1OP: ".16", GLOW2OP: ".07", COREFILL: "#0B2530", PULSE: "#FFFFFF",
   },
   light: {
     BG: "#F6F8FB", SURFACE: "#FFFFFF", PLATE: "#FFFFFF", PLATE2: "#E6ECF5", GRID: "#E9EDF4", GRID2: "#D3DAE6",
-    TEXT: "#090B10", MUTED: "#66728A", ACCENT: "#0077B6", BLUE: "#3A50E0", GLOWOP: ".10", SCANOP: ".06",
+    TEXT: "#090B10", MUTED: "#66728A", ACCENT: "#0077B6", BLUE: "#3A50E0", GLOWOP: ".035", SCANOP: ".06",
+    BIN1: "#0077B6", BIN1OP: ".48", BIN2: "#005F92", BIN2OP: ".9", BIN3: "#00324D", BINW: "700", OLOP: ".85", GLOW1OP: ".10", GLOW2OP: ".045", COREFILL: "#DDF3FB", PULSE: "#00A3E0",
   },
 };
 
@@ -43,141 +46,6 @@ function write(name, svg) {
     if (left) throw new Error(`Marcador sin resolver ${left[0]} en ${name}`);
     writeFileSync(new URL(`${name}-${mode}.svg`, OUT), out);
   }
-}
-
-/* ───────────── Banner ───────────── */
-function banner() {
-  const cx = 955, W = 120, H = 60, D = 8;
-  const L = [
-    { y: 360, n: "01", name: "DEVICE", techs: "Electron · BLE", s: "{{MUTED}}", so: ".6" },
-    { y: 280, n: "02", name: "DATA", techs: "MongoDB · SQL", s: "{{MUTED}}", so: ".6" },
-    { y: 200, n: "03", name: "LOGIC", techs: "Node.js · APIs", s: "{{BLUE}}", so: "1" },
-    { y: 120, n: "04", name: "INTERFACE", techs: "React · Astro", s: "{{ACCENT}}", so: "1" },
-  ];
-  const P = (a) => a.map(([x, y]) => `${x},${y}`).join(" ");
-  const top = L[3].y, bot = L[0].y;
-
-  const plates = L.map((l, i) => {
-    const y = l.y, k = 0.62;
-    const face = P([[cx, y - H], [cx + W, y], [cx, y + H], [cx - W, y]]);
-    return `<g>
-<polygon points="${P([[cx - W, y], [cx, y + H], [cx, y + H + D], [cx - W, y + D]])}" fill="{{PLATE2}}" stroke="${l.s}" stroke-opacity="${l.so}"/>
-<polygon points="${P([[cx, y + H], [cx + W, y], [cx + W, y + D], [cx, y + H + D]])}" fill="{{PLATE2}}" stroke="${l.s}" stroke-opacity="${l.so}"/>
-<polygon points="${face}" fill="{{PLATE}}" stroke="${l.s}" stroke-opacity="${l.so}" stroke-width="1.4"/>
-<polygon points="${P([[cx, y - H * k], [cx + W * k, y], [cx, y + H * k], [cx - W * k, y]])}" fill="none" stroke="{{GRID2}}" stroke-dasharray="3 4"/>
-<text class="mono eng" fill="${l.s}" transform="matrix(.894 .447 -.894 .447 ${cx - 91} ${y + 4})">${l.name}</text>
-<polygon class="glow" style="animation-delay:${(i * 0.92).toFixed(2)}s" points="${face}" fill="{{ACCENT}}" fill-opacity=".1" stroke="{{ACCENT}}" stroke-width="2"/>
-<circle cx="${cx + W}" cy="${y}" r="3" fill="${l.s}"/>
-<path d="M${cx + W + 6} ${y}H${cx + W + 26}" stroke="{{MUTED}}"/>
-<text class="mono cap" x="${cx + W + 32}" y="${y - 4}">LAYER ${l.n}</text>
-<text class="sans lys" x="${cx + W + 32}" y="${y + 15}">${esc(l.techs)}</text>
-</g>`;
-  }).join("\n");
-
-  const stack = `<g class="float">
-<g stroke="{{GRID2}}" stroke-dasharray="2 5"><path d="M${cx - W} ${top}V${bot + D}M${cx + W} ${top}V${bot + D}M${cx} ${top + H}V${bot + H + D}"/></g>
-<path d="M${cx} ${bot}V${top}" stroke="{{ACCENT}}" stroke-opacity=".35" stroke-dasharray="2 6"/>
-${plates}
-<path class="beam" d="M${cx} ${bot}V${top}" stroke="{{ACCENT}}" stroke-width="3" stroke-linecap="round" fill="none"/>
-<g stroke="{{MUTED}}" stroke-opacity=".8"><path d="M798 ${top}H829M798 ${bot}H829M808 ${top + 6}V${bot - 6}"/></g>
-<path d="M808 ${top}l-3.5 8h7zM808 ${bot}l-3.5-8h7z" fill="{{MUTED}}"/>
-<text class="mono dim" transform="rotate(-90 796 ${(top + bot) / 2})" x="796" y="${(top + bot) / 2}" text-anchor="middle">FULL STACK</text>
-</g>`;
-
-  let ticks = "", marks = "";
-  for (let x = 40; x <= 1240; x += 16) {
-    const major = x % 80 === 0;
-    ticks += `M${x} 25V${major ? 33 : 29}`;
-    if (major) marks += `<text class="mono rl" x="${x}" y="45" text-anchor="middle">${String(x / 80).padStart(2, "0")}</text>`;
-  }
-  for (let y = 40; y <= 460; y += 16) {
-    const major = y % 80 === 0;
-    ticks += `M25 ${y}H${major ? 33 : 29}`;
-    if (major) marks += `<text class="mono rl" x="40" y="${y + 3}">${"ABCDE"[y / 80 - 1]}</text>`;
-  }
-
-  const roles = ["SOFTWARE ENGINEERING STUDENT", "PRODUCT BUILDER", "FULL-STACK DEVELOPER", "AI &amp; HCI EXPLORER"]
-    .map((r, i) => `<text class="mono role rw${i ? "" : " r0"}" style="animation-delay:${i * 3}s" x="168" y="290">${r}</text>`).join("");
-  const stats = [["{{PROJECTS}}", "PROJECTS"], ["{{TECHS}}", "TECHNOLOGIES"], ["{{LANGS}}", "LANGUAGES"], ["2023", "BUILDING SINCE"]]
-    .map(([v, k], i) => {
-      const x = 72 + i * 160;
-      return `<g class="in" style="animation-delay:${(1.5 + i * 0.15).toFixed(2)}s">${i ? `<path d="M${x - 22} 398V448" stroke="{{GRID2}}"/>` : ""}<text class="sans num" x="${x}" y="426">${v}</text><text class="mono cap" x="${x}" y="450">${k}</text></g>`;
-    }).join("");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-label="Josué Rincón. Software engineering student, product builder, full-stack developer, AI and HCI explorer. Building ideas into technology. {{PROJECTS}} projects, {{TECHS}} technologies.">
-<defs>
-<pattern id="mi" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="{{GRID}}" stroke-width=".5"/></pattern>
-<pattern id="ma" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="url(#mi)"/><path d="M80 0H0V80" fill="none" stroke="{{GRID2}}"/></pattern>
-<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="{{BG}}" stop-opacity=".97"/><stop offset=".55" stop-color="{{BG}}" stop-opacity=".7"/><stop offset="1" stop-color="{{BG}}" stop-opacity="0"/></linearGradient>
-<radialGradient id="glow" cx="955" cy="245" r="330" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{{ACCENT}}" stop-opacity="{{GLOWOP}}"/><stop offset="1" stop-color="{{ACCENT}}" stop-opacity="0"/></radialGradient>
-<linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="{{ACCENT}}" stop-opacity="0"/><stop offset=".5" stop-color="{{ACCENT}}" stop-opacity="{{SCANOP}}"/><stop offset="1" stop-color="{{ACCENT}}" stop-opacity="0"/></linearGradient>
-<clipPath id="frame"><rect x="25" y="25" width="1230" height="450"/></clipPath>
-</defs>
-<style>${FONTS}
-.lbl{font-size:12px;letter-spacing:1.8px;fill:{{MUTED}}}
-.rl{font-size:9px;letter-spacing:1px;fill:{{MUTED}};opacity:.75}
-.chip{font-size:12px;letter-spacing:1.8px;fill:{{ACCENT}}}
-.name{font-size:84px;font-weight:650;letter-spacing:-2.8px;fill:{{TEXT}}}
-.rp{font-size:16px;letter-spacing:3.4px;fill:{{MUTED}}}
-.role{font-size:16px;letter-spacing:3.4px;fill:{{ACCENT}}}
-.tag{font-size:30px;fill:{{TEXT}};opacity:.82}
-.num{font-size:36px;font-weight:600;letter-spacing:-.5px;fill:{{TEXT}}}
-.cap{font-size:11px;letter-spacing:1.8px;fill:{{MUTED}}}
-.lys{font-size:14px;fill:{{TEXT}};opacity:.85}
-.eng{font-size:12px;letter-spacing:3px}
-.dim{font-size:11px;letter-spacing:3px;fill:{{ACCENT}}}
-.tb{font-size:10px;letter-spacing:1.6px;fill:{{MUTED}}}
-.tv{font-size:13px;letter-spacing:1px;fill:{{TEXT}}}
-.scan{animation:scan 9s linear infinite}
-@keyframes scan{from{transform:translateX(-220px)}to{transform:translateX(1500px)}}
-.draw{stroke-dasharray:520;stroke-dashoffset:520;animation:draw 1.6s cubic-bezier(.6,0,.2,1) .4s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.wipe{clip-path:inset(0 100% 0 0);animation:wipe 1.4s cubic-bezier(.6,0,.2,1) 1s forwards}
-@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
-.rw{opacity:0;animation:role 12s infinite}
-@keyframes role{0%{opacity:0;transform:translateY(10px)}3%,22%{opacity:1;transform:translateY(0)}25%,100%{opacity:0;transform:translateY(-10px)}}
-.in{opacity:0;animation:in .7s ease-out forwards}
-@keyframes in{to{opacity:1}}
-.float{animation:float 6s ease-in-out infinite alternate}
-@keyframes float{from{transform:translateY(-4px)}to{transform:translateY(4px)}}
-.glow{opacity:0;animation:glow 6s ease-out infinite}
-@keyframes glow{0%{opacity:0}6%{opacity:1}30%,100%{opacity:0}}
-.beam{stroke-dasharray:26 400;stroke-dashoffset:26;animation:beam 6s cubic-bezier(.5,0,.4,1) infinite}
-@keyframes beam{0%{stroke-dashoffset:26;opacity:0}4%{opacity:1}46%{stroke-dashoffset:-238;opacity:1}52%,100%{stroke-dashoffset:-238;opacity:0}}
-.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
-@media (prefers-reduced-motion:reduce){.scan,.beam,.glow,.led{display:none}.draw{animation:none;stroke-dashoffset:0}.wipe{animation:none;clip-path:none}.in{animation:none;opacity:1}.float,.rw{animation:none}.r0{opacity:1}}
-</style>
-<rect width="1280" height="500" fill="{{BG}}"/>
-<rect width="1280" height="500" fill="url(#ma)"/>
-<rect width="1280" height="500" fill="url(#glow)"/>
-<rect width="780" height="500" fill="url(#fade)"/>
-<g clip-path="url(#frame)"><rect class="scan" x="0" y="25" width="200" height="450" fill="url(#scan)"/></g>
-<rect x="24.5" y="24.5" width="1231" height="451" fill="none" stroke="{{GRID2}}"/>
-<path d="${ticks}" stroke="{{GRID2}}"/>
-${marks}
-<path d="M25 47V25h22M1233 25h22v22M25 453v22h22M1233 475h22v-22" fill="none" stroke="{{ACCENT}}" stroke-width="1.5"/>
-<text class="mono lbl" x="72" y="88">FIG. 00 — DEVELOPER IDENTITY</text>
-<text class="mono lbl" x="1232" y="88" text-anchor="end">SHEET 01 / {{SHEETS}}</text>
-<g class="in" style="animation-delay:.1s">
-<rect x="72.5" y="110.5" width="330" height="28" rx="14" fill="none" stroke="{{ACCENT}}" stroke-opacity=".45"/>
-<circle cx="90" cy="124.5" r="4" fill="{{ACCENT}}"/><circle class="led" cx="90" cy="124.5" r="4" fill="{{ACCENT}}"/>
-<text class="mono chip" x="104" y="129">BUILDING · SYNDES + ANILLO LAB</text>
-</g>
-<text class="sans name in" style="animation-delay:.2s" x="68" y="222">Josué Rincón</text>
-<path d="M72 244V256M592 244V256" stroke="{{MUTED}}"/>
-<path class="draw" d="M72 250H592" stroke="{{ACCENT}}" stroke-width="1.5"/>
-<path class="in" style="animation-delay:1.7s" d="M72 250l8-3.5v7zM592 250l-8-3.5v7z" fill="{{ACCENT}}"/>
-<text class="mono rp" x="72" y="290">ROLE /</text>
-${roles}
-<text class="sans tag wipe" x="72" y="346">Building ideas into technology.</text>
-<path d="M72 380.5H690M72 380V374M232 380V374M392 380V374M552 380V374" stroke="{{GRID2}}"/>
-${stats}
-${stack}
-<path d="M1064 425.5H1255M1064.5 425V475M1160.5 425V475" stroke="{{GRID2}}"/>
-<text class="mono tb" x="1076" y="443">DWG</text><text class="mono tv" x="1076" y="463">JR-001</text>
-<text class="mono tb" x="1172" y="443">REV</text><text class="mono tv" x="1172" y="463">{{REV}}</text>
-</svg>`;
 }
 
 /* ───────────── Encabezado de hoja ───────────── */
@@ -327,7 +195,7 @@ function now() {
 .hd{font-size:15px;letter-spacing:2.4px}
 .it{font-size:26px;font-weight:600;letter-spacing:-.4px;fill:{{TEXT}}}
 .st{font-size:18px;fill:{{MUTED}}}
-.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.led{opacity:0;animation:led 2s ease-out 8;transform-box:fill-box;transform-origin:center}
 @keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
 @media (prefers-reduced-motion:reduce){.led{display:none}}
 </style>
@@ -354,7 +222,7 @@ function footer() {
 <style>${FONTS}
 .k{font-size:12px;letter-spacing:2px;fill:{{MUTED}}}
 .v{font-size:19px;letter-spacing:1.4px;fill:{{TEXT}}}
-.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.led{opacity:0;animation:led 2s ease-out 8;transform-box:fill-box;transform-origin:center}
 @keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
 @media (prefers-reduced-motion:reduce){.led{display:none}}
 </style>
@@ -365,7 +233,7 @@ ${body}
 }
 
 /* ───────────── Salida ───────────── */
-write("banner", banner());
+write("banner", banner(root, inv));
 write("sheet-02", sheet("02", "Selected work", "4 PROJECTS · 1 FEATURED"));
 write("sheet-03", sheet("03", "Tech inventory", `${inv.projects} PROJECTS · ${inv.technologies} TECHNOLOGIES`));
 write("sheet-04", sheet("04", "Now", "BUILDING · LEARNING · EXPLORING"));

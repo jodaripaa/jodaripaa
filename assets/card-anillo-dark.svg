@@ -13,7 +13,7 @@
     .chip { font-size: 14px; letter-spacing: 1.6px; }
     .stack { font-size: 15px; letter-spacing: 1.6px; fill: #00D4FF; }
     .gl { font-size: 11px; letter-spacing: 1px; fill: #6B7790; }
-    .wv { opacity: .15; animation: wave 2.4s ease-out infinite; }
+    .wv { opacity: .15; animation: wave 2.4s ease-out 8; }
     @keyframes wave { 0% { opacity: .15; } 20% { opacity: 1; } 60%, 100% { opacity: .15; } }
     @media (prefers-reduced-motion: reduce) { .wv { animation: none; opacity: .8; } }
   </style>

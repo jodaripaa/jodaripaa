@@ -13,11 +13,11 @@
     .chip { font-size: 14px; letter-spacing: 1.6px; }
     .stack { font-size: 15px; letter-spacing: 1.6px; fill: {{ACCENT}}; }
     .gl { font-size: 11px; letter-spacing: 1px; fill: {{MUTED}}; }
-    .sig { stroke-dasharray: 10 120; stroke-dashoffset: 10; animation: sig 3s ease-in-out infinite; }
+    .sig { stroke-dasharray: 10 120; stroke-dashoffset: 10; animation: sig 3s ease-in-out 6; }
     @keyframes sig { 0% { stroke-dashoffset: 10; opacity: 0; } 5% { opacity: 1; } 30% { stroke-dashoffset: -50; opacity: 1; } 34%, 100% { stroke-dashoffset: -50; opacity: 0; } }
-    .lamp { opacity: 0; animation: lamp 3s ease-out infinite; }
-    @keyframes lamp { 0%, 52% { opacity: 0; } 58%, 80% { opacity: 1; } 90%, 100% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .sig { display: none; } .lamp { animation: none; opacity: 1; } }
+    .lamp { animation: lamp 3s ease-out 6; }
+    @keyframes lamp { 0%, 52% { opacity: 0; } 58%, 100% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .sig { display: none; } }
   </style>
   <rect x="1" y="1" width="638" height="458" rx="14" fill="{{SURFACE}}" stroke="{{GRID2}}" stroke-width="2"/>
   <rect x="2" y="2" width="636" height="456" rx="14" fill="url(#g)" opacity=".6"/>

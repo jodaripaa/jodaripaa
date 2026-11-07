@@ -14,15 +14,15 @@
     .stack { font-size: 16px; letter-spacing: 2px; fill: #0077B6; }
     .nl { font-size: 14px; letter-spacing: 1.6px; fill: #090B10; }
     .node { fill: #FFFFFF; stroke: #D3DAE6; stroke-width: 1.5; }
-    .pulse { stroke-dasharray: 18 600; stroke-dashoffset: 18; animation: flow 4s cubic-bezier(.5,0,.5,1) infinite; }
+    .pulse { stroke-dasharray: 18 600; stroke-dashoffset: 18; animation: flow 4s cubic-bezier(.5,0,.5,1) 6; }
     @keyframes flow { 0% { stroke-dashoffset: 18; opacity: 0; } 6% { opacity: 1; } 80% { stroke-dashoffset: -544; opacity: 1; } 86%, 100% { stroke-dashoffset: -544; opacity: 0; } }
-    .lit { opacity: 0; animation: lit 4s ease-out infinite; }
+    .lit { opacity: 0; animation: lit 4s ease-out 6; }
     @keyframes lit { 0% { opacity: 0; } 8% { opacity: 1; } 30%, 100% { opacity: 0; } }
-    .led { animation: led 2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+    .led { opacity: 0; animation: led 2s ease-out 8; transform-box: fill-box; transform-origin: center; }
     @keyframes led { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(2.8); } }
-    .grow { stroke-dasharray: 540; stroke-dashoffset: 540; animation: grow 1.6s ease-out .3s forwards; }
-    @keyframes grow { to { stroke-dashoffset: 0; } }
-    @media (prefers-reduced-motion: reduce) { .pulse, .lit, .led { display: none; } .grow { animation: none; stroke-dashoffset: 0; } }
+    .grow { stroke-dasharray: 540; animation: grow 1.6s ease-out .3s both; }
+    @keyframes grow { from { stroke-dashoffset: 540; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
 
   <rect x="1" y="1" width="1278" height="438" rx="14" fill="#FFFFFF" stroke="#D3DAE6" stroke-width="2"/>

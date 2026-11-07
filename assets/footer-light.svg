@@ -2,7 +2,7 @@
 <style>.sans{font-family:'Inter','Segoe UI Variable Display','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}.mono{font-family:'JetBrains Mono','Cascadia Code',ui-monospace,Consolas,Menlo,monospace}
 .k{font-size:12px;letter-spacing:2px;fill:#66728A}
 .v{font-size:19px;letter-spacing:1.4px;fill:#090B10}
-.led{animation:led 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.led{opacity:0;animation:led 2s ease-out 8;transform-box:fill-box;transform-origin:center}
 @keyframes led{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
 @media (prefers-reduced-motion:reduce){.led{display:none}}
 </style>

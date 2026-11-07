@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="440" viewBox="0 0 620 440">
+<defs>
+<radialGradient id="gPec" cx="310" cy="205" r="118" gradientUnits="userSpaceOnUse"><stop offset=".5" stop-color="#fff"/><stop offset=".78" stop-color="#c8c8c8"/><stop offset="1" stop-color="#8c8c8c"/></radialGradient>
+<linearGradient id="gFlank" x1="286" y1="0" x2="232" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a8a8a8"/><stop offset="1" stop-color="#5c5c5c"/></linearGradient>
+<radialGradient id="gAb" cx="310" cy="215" r="92" gradientUnits="userSpaceOnUse"><stop offset=".45" stop-color="#fff"/><stop offset=".8" stop-color="#c8c8c8"/><stop offset="1" stop-color="#8c8c8c"/></radialGradient>
+<linearGradient id="gUA" x1="171" y1="163" x2="186" y2="203" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f4f4"/><stop offset=".5" stop-color="#c0c0c0"/><stop offset="1" stop-color="#a6a6a6"/></linearGradient>
+<linearGradient id="gFA" x1="0" y1="180" x2="0" y2="242" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f0f0f0"/><stop offset=".13" stop-color="#d4d4d4"/><stop offset=".17" stop-color="#a8a8a8"/><stop offset=".32" stop-color="#a0a0a0"/><stop offset="1" stop-color="#929292"/></linearGradient>
+<linearGradient id="gHand" x1="0" y1="190" x2="0" y2="232" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a6a6a6"/><stop offset="1" stop-color="#929292"/></linearGradient>
+<radialGradient id="gPaul" cx="210" cy="116" r="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#e8e8e8"/><stop offset=".8" stop-color="#bcbcbc"/><stop offset="1" stop-color="#9c9c9c"/></radialGradient>
+<linearGradient id="gHelm" x1="0" y1="30" x2="0" y2="112" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a4a4a4"/><stop offset="1" stop-color="#8a8a8a"/></linearGradient>
+<linearGradient id="gThigh" x1="254" y1="0" x2="296" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#888"/><stop offset=".6" stop-color="#a4a4a4"/><stop offset="1" stop-color="#949494"/></linearGradient>
+<linearGradient id="gS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a0a0a0"/><stop offset=".5" stop-color="#5a5a5a"/><stop offset="1" stop-color="#000"/></linearGradient>
+<linearGradient id="gS2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6c6c6c"/><stop offset="1" stop-color="#000"/></linearGradient>
+</defs>
+<rect width="620" height="440" fill="#000"/>
+<!-- compile streams: only inside the leg columns (L cols 37-41, R cols 46-50) -->
+<rect x="260.7" y="350" width="7.05" height="18" fill="url(#gS)"/>
+<rect x="267.7" y="350" width="7.05" height="52" fill="url(#gS)"/>
+<rect x="267.7" y="410" width="7.05" height="14" fill="url(#gS2)"/>
+<rect x="274.8" y="350" width="7.05" height="80" fill="url(#gS)"/>
+<rect x="281.8" y="350" width="7.05" height="64" fill="url(#gS)"/>
+<rect x="281.8" y="420" width="7.05" height="14" fill="url(#gS2)"/>
+<rect x="288.9" y="350" width="7.05" height="34" fill="url(#gS)"/>
+<rect x="288.9" y="392" width="7.05" height="14" fill="url(#gS2)"/>
+<rect x="324.1" y="350" width="7.05" height="40" fill="url(#gS)"/>
+<rect x="324.1" y="398" width="7.05" height="14" fill="url(#gS2)"/>
+<rect x="331.1" y="350" width="7.05" height="70" fill="url(#gS)"/>
+<rect x="338.2" y="350" width="7.05" height="86" fill="url(#gS)"/>
+<rect x="345.2" y="350" width="7.05" height="46" fill="url(#gS)"/>
+<rect x="345.2" y="404" width="7.05" height="16" fill="url(#gS2)"/>
+<rect x="352.3" y="350" width="7.05" height="14" fill="url(#gS)"/>
+<g id="half">
+<polygon points="294,120 298,133 254,142 247,131 276,122" fill="#747474" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="296.5,126 258,129 238,137 223,156 223.1,159.8 296.5,202.2" fill="url(#gPec)"/>
+<polygon points="223.1,159.8 224,190 235,216 249,242 250.1,244.6 296.5,217.8 296.5,202.2" fill="url(#gFlank)"/>
+<polygon points="250.1,244.6 258,264 264,286 296.5,286 296.5,217.8" fill="url(#gAb)"/>
+<polygon points="310,125 302.5,125.6 302.5,286 310,286" fill="#fff"/>
+<path d="M268.4 186L95.2 86M268.4 234L95.2 334" stroke="#000" stroke-width="6"/>
+<path d="M248 263H297" stroke="#000" stroke-width="6"/>
+<path d="M226 203L268 203M232 225L272 225" stroke="#000" stroke-width="5"/>
+<!-- leg: thigh, shin, hex knee, scan row -->
+<polygon points="253.6,300 295.9,300 295.9,318 256.8,318" fill="url(#gThigh)"/>
+<polygon points="257.7,323 295.9,323 295.9,340 260.7,340" fill="#9c9c9c"/>
+<polygon points="278,310 286.7,315 286.7,325 278,330 269.3,325 269.3,315" fill="#fff"/>
+<rect x="260.7" y="340" width="35.2" height="10" fill="#fff"/>
+<!-- arm: upper arm, forearm + hex inset, gauntlet + palm node, thumb -->
+<polygon points="202,148 140,178 154,218 218,188" fill="url(#gUA)" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="146,186 100,180 90,183 90,240 112,243 150,226" fill="url(#gFA)" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="118,199 130.1,206 130.1,220 118,227 105.9,220 105.9,206" fill="#fff" stroke="#000" stroke-width="4" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="84,192 58,190 42,193 34,199 34,225 42,230 58,232 84,230" fill="url(#gHand)" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<rect x="63.4" y="200" width="14.1" height="20" fill="#9c9c9c"/>
+<polygon points="84,193 66,190 49,174 57,164 78,179" fill="#d8d8d8" stroke="#000" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="241.7,154.6 210.6,162.9 186.1,177.1 193.2,189.3 217.7,185.9 239.6,170.6" fill="#9c9c9c" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<polygon points="256.5,127.1 238,113 207,109 179,120 167,147 177,169 202,157.7 232.4,147.6" fill="url(#gPaul)" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+</g>
+<use href="#half" transform="translate(620,0) scale(-1,1)"/>
+<!-- square groove: clamps the chest plates to medium around the core so the square HUD frame stays legible -->
+<rect x="255" y="155" width="110" height="110" rx="6" fill="none" stroke="#8c8c8c" stroke-width="22" style="mix-blend-mode:darken"/>
+<!-- square chip socket: the banner draws an animated microchip inside -->
+<rect x="262" y="162" width="96" height="96" rx="6" fill="#000"/>
+<rect x="268" y="168" width="84" height="84" rx="4" fill="#fff"/>
+<rect x="277" y="177" width="66" height="66" rx="3" fill="#000"/>
+<!-- belt -->
+<polygon points="263,282 357,282 353,296 267,296" fill="#8c8c8c" stroke="#000" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+<rect x="303" y="282" width="14.1" height="14" fill="#e6e6e6"/>
+<!-- neck, helm (12 cols), visor halos and one straight visor band -->
+<rect x="297" y="104" width="26" height="22" fill="#3a3a3a"/>
+<polygon points="292,31 328,31 344,42 352,54 352,86 334,111 286,111 268,86 268,54 276,42" fill="url(#gHelm)" stroke="#000" stroke-width="3" paint-order="stroke"/>
+<rect x="274.8" y="50" width="70.5" height="10" fill="#000"/>
+<rect x="274.8" y="80" width="70.4" height="10" fill="#000"/>
+<rect x="274.8" y="60" width="70.4" height="20" fill="#fff"/>
+<g id="outline" display="none">
+<path d="M292 31H328L344 42L352 54V86L334 111H286L268 86V54L276 42Z"/>
+<path d="M275 60H345V80H275Z"/>
+<path d="M256.5 127.1 238 113 207 109 179 120 167 147 177 169 202 157.7 232.4 147.6ZM363.5 127.1 382 113 413 109 441 120 453 147 443 169 418 157.7 387.6 147.6Z"/>
+<path d="M241.7 154.6 210.6 162.9 186.1 177.1 193.2 189.3 217.7 185.9 239.6 170.6ZM378.3 154.6 409.4 162.9 433.9 177.1 426.8 189.3 402.3 185.9 380.4 170.6Z"/>
+<path d="M202 148 140 178 154 218 218 188ZM418 148 480 178 466 218 402 188Z"/>
+<path d="M146 186 100 180 90 183 90 240 112 243 150 226ZM474 186 520 180 530 183 530 240 508 243 470 226Z"/>
+<path d="M118 199 130.1 206 130.1 220 118 227 105.9 220 105.9 206ZM502 199 489.9 206 489.9 220 502 227 514.1 220 514.1 206Z"/>
+<path d="M84 192 58 190 42 193 34 199 34 225 42 230 58 232 84 230ZM536 192 562 190 578 193 586 199 586 225 578 230 562 232 536 230Z"/>
+<path d="M35 202H56M35 211H57M35 220H57M585 202H564M585 211H563M585 220H563"/>
+<path d="M84 193 66 190 49 174 57 164 78 179ZM536 193 554 190 571 174 563 164 542 179Z"/>
+<path d="M310 125 258 129 238 137 223 156 224 190 235 216 249 242 258 264 264 286M310 125 362 129 382 137 397 156 396 190 385 216 371 242 362 264 356 286"/>
+<path d="M268 168H352V252H268Z"/>
+<path d="M299.5 130V166M320.5 130V166M299.5 254V284M320.5 254V284"/>
+<path d="M268 168 240 155M352 168 380 155M268 252 252 262M352 252 368 262"/>
+<path d="M263 282H357L353 296H267Z"/>
+<path d="M253.6 300H295.9V318H256.8ZM366.4 300H324.1V318H363.2Z"/>
+<path d="M257.7 323H295.9V340H260.7ZM362.3 323H324.1V340H359.3Z"/>
+<path d="M278 310 286.7 315 286.7 325 278 330 269.3 325 269.3 315ZM342 310 333.3 315 333.3 325 342 330 350.7 325 350.7 315Z"/>
+<path d="M261 350 264 400 268 440M295.9 350V440M359 350 356 400 352 440M324.1 350V440" stroke-dasharray="4 5" opacity=".6"/>
+</g>
+</svg>
